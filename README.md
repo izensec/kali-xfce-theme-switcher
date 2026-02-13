@@ -19,7 +19,6 @@ A simple script to **switch** between **dark** and **light** **themes** in the *
 ## Installation
 
 ```bash
-# make a private bin directory if it doesn't exist
 mkdir -p ~/.local/bin
 curl -fsSL https://raw.githubusercontent.com/izensec/kali-xfce-theme-switcher/main/theme-switcher.sh -o ~/.local/bin/theme-switcher.sh
 chmod +x ~/.local/bin/theme-switcher.sh
@@ -47,7 +46,10 @@ That's it!
 
 ### Option 2: Command line
 
-On Kali Linux, `~/.local/bin` is in your `PATH` by default, so you can call the script directly:
+On Kali Linux, `~/.local/bin` is included in the `PATH` by default **if the folder already exists**. 
+If it did not exist and was created during installation, you can run `exec zsh --login` to add it to your `PATH` without logging out and back in.
+
+The script can now be executed directly:
 
 ```bash
 # Toggle dark/light theme using default color
